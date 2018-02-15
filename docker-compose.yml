@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  squid:
+    build: .
+    container_name: squid
+    volumes:
+      - ./cache:/var/spool/squid
+    ports:
+      - 3128:3128
+
