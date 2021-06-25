@@ -1,5 +1,4 @@
-version: '2'
-
+version: '3.5'
 services:
   squid:
     build:
@@ -12,4 +11,4 @@ services:
     volumes:
       - ./cache:/var/spool/squid
     ports:
-      - 3128:3128
+      - "${PORT}:3128"

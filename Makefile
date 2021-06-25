@@ -1,7 +1,7 @@
 EDITOR=vim
 
 include /etc/os-release
-
+export PORT=3128
 all: install-prerequisites regconfig build
 
 install-prerequisites:
