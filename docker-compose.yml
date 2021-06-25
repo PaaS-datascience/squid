@@ -2,10 +2,14 @@ version: '2'
 
 services:
   squid:
-    build: .
+    build:
+      context: .
+      args:
+        http_proxy: ${http_proxy}
+        https_proxy: ${https_proxy}
+        no_proxy: ${no_proxy}
     container_name: squid
     volumes:
       - ./cache:/var/spool/squid
     ports:
       - 3128:3128
-
