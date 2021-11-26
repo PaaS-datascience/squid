@@ -10,6 +10,7 @@ services:
     container_name: squid
     volumes:
       - ./cache:/var/spool/squid
+      - ./squid.conf:/etc/squid/squid.conf
     ports:
       - "${PORT}:3128"
     restart: always
