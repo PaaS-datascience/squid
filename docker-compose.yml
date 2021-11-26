@@ -12,3 +12,4 @@ services:
       - ./cache:/var/spool/squid
     ports:
       - "${PORT}:3128"
+    restart: always
